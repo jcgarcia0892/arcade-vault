@@ -11,8 +11,10 @@ export function Nav() {
   const { user, logout } = useUser();
   const [open, setOpen] = useState(false);
 
-  const libraryActive = pathname === "/" || pathname.startsWith("/juegos/");
+  const homeActive = pathname === "/";
+  const libraryActive = pathname === "/juegos" || pathname.startsWith("/juegos/");
   const salonActive = pathname === "/salon";
+  const aboutActive = pathname === "/about";
   const authActive = pathname === "/auth";
   const close = () => setOpen(false);
 
@@ -26,11 +28,17 @@ export function Nav() {
           </div>
         </Link>
         <div className="links">
-          <Link href="/" className={libraryActive ? "active" : ""}>
+          <Link href="/" className={homeActive ? "active" : ""}>
+            Inicio
+          </Link>
+          <Link href="/juegos" className={libraryActive ? "active" : ""}>
             Biblioteca
           </Link>
           <Link href="/salon" className={salonActive ? "active" : ""}>
             Salón de la Fama
+          </Link>
+          <Link href="/about" className={aboutActive ? "active" : ""}>
+            Acerca de
           </Link>
         </div>
         <div className="spacer"></div>
@@ -55,11 +63,17 @@ export function Nav() {
       <div className={"av-mobile-backdrop" + (open ? " open" : "")} onClick={close}></div>
       <aside className={"av-mobile-panel" + (open ? " open" : "")}>
         <div className="pixel neon-cyan mb-4 text-[11px]">MENÚ</div>
-        <Link href="/" className={libraryActive ? "active" : ""} onClick={close}>
+        <Link href="/" className={homeActive ? "active" : ""} onClick={close}>
+          Inicio
+        </Link>
+        <Link href="/juegos" className={libraryActive ? "active" : ""} onClick={close}>
           Biblioteca
         </Link>
         <Link href="/salon" className={salonActive ? "active" : ""} onClick={close}>
           Salón de la Fama
+        </Link>
+        <Link href="/about" className={aboutActive ? "active" : ""} onClick={close}>
+          Acerca de
         </Link>
         <Link href="/auth" className={authActive ? "active" : ""} onClick={close}>
           {user ? "Cuenta" : "Iniciar Sesión"}
