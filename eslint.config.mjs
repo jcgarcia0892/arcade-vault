@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Reference prototype (browser-global React via Babel), not app code.
+    "resources/**",
   ]),
 ]);
 
