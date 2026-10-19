@@ -1,6 +1,6 @@
 # SPEC 01 — MVP visual: pantallas del template en Next.js
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** —
 > **Fecha:** 2026-10-19
 > **Objetivo:** Portar a Next.js App Router las cinco pantallas de `resources/templates/` (Biblioteca, Detalle, Reproductor, Acceso y Salón de la Fama) como réplica visual 1:1 con datos mock, sin implementar ningún juego.
