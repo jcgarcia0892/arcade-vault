@@ -1,6 +1,6 @@
 # SPEC 02 — Home landing, Biblioteca en `/juegos` y ruta `/about`
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01
 > **Fecha:** 2026-10-19
 > **Objetivo:** Sustituir la Biblioteca de `/` por la landing de `resources/templates/home-about/home.jsx`, mover la Biblioteca a `/juegos` y crear `/about` como placeholder mínimo.
