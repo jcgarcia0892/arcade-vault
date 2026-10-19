@@ -90,7 +90,7 @@ export function HallOfFame() {
       </div>
 
       <div className="mt-8 text-center">
-        <button className="btn lg" onClick={() => router.push("/")}>
+        <button className="btn lg" onClick={() => router.push("/juegos")}>
           VOLVER A LA BIBLIOTECA
         </button>
       </div>
